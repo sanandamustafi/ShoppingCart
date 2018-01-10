@@ -9,7 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Add Categories</h1>  
+<h1>Add Category</h1>  
        <form:form method="post" action="savecategories">    
         <table >    
          <tr>    

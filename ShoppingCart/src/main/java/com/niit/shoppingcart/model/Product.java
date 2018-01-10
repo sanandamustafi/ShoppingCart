@@ -23,13 +23,25 @@ public class Product implements Serializable{
 	private String productName;
 	private String productDescription;
 	private  double price;
-	private int stock;
+	
 	@ManyToOne
 	@JoinColumn(name="categoryId")
 	private Categories productcategories;
 	@Transient
 	private MultipartFile file;
-	private String ProductImage;
+	private String productImage;
+	public Categories getProductcategories() {
+		return productcategories;
+	}
+	public void setProductcategories(Categories productcategories) {
+		this.productcategories = productcategories;
+	}
+	public String getProductImage() {
+		return productImage;
+	}
+	public void setProductImage(String productImage) {
+		this.productImage = productImage;
+	}
 	public boolean productStatus;
 	public boolean isProductStatus() {
 		return productStatus;
@@ -61,12 +73,7 @@ public class Product implements Serializable{
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	public int getStock() {
-		return stock;
-	}
-	public void setStock(int stock) {
-		this.stock = stock;
-	}
+	
 	public Categories getCategories() {
 		return productcategories;
 	}
@@ -79,11 +86,6 @@ public class Product implements Serializable{
 	public void setFile(MultipartFile file) {
 		this.file = file;
 	}
-	public String getProductImage() {
-		return ProductImage;
-	}
-	public void setProductImage(String productImage) {
-		ProductImage = productImage;
-	}
+	
 
 }

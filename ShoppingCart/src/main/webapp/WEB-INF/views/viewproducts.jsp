@@ -22,23 +22,24 @@
  <div class="row">
 <div class="col-md-6" style="border:0px solid gray">
  
-<h3> ${sucessMessage}</h3>  
+<h3> ${successMessage}</h3>  
   
 <h1><b>Product List</b></h1>  
 <table align="center"  width="70%"  class="table table-hover table-condensed table-bordered table-responsive">  
-<tr><th>Id</th><th>Name</th><th>Price</th><th>Description</th><th>Stock</th><th>price</th></tr>  
+<tr><th>Id</th><th>Name</th><th>Description</th><th>Price</th></tr>  
    <c:forEach var="product" items="${list}">   
    <tr> 
    <td>${product.productId}</td>   
    <td>${product.productName}</td>  
    <td>${product.productDescription}</td>  
-   <td>${product.stock }
+   
    <td>${product.price}</td> 
-   <td>${product.productImage } 
+   
+   <td>${product.productImage }</td> 
   
   <td><img src="${pageContext.request.contextPath}/${product.productImage}" height="50" width="50"></td>
-   <td><a href="${pageContext.request.contextPath}/discontinueProduct/${product.productId}"><button type="button" class="btn btn-danger">Discontinue</button></a></td>
-  <td><a href="${pageContext.request.contextPath}/updateProduct/${product.productId}"><button type="button" class="btn btn-success">Edit</button></a></td>
+   <td><a href="${pageContext.request.contextPath}/discontinueproduct/${product.productId}"><button type="button" class="btn btn-danger">Discontinue</button></a></td>
+  <td><a href="${pageContext.request.contextPath}/updateproduct/${product.productId}"><button type="button" class="btn btn-success">Edit</button></a></td>
    </tr>  
    </c:forEach>  
    </table>  

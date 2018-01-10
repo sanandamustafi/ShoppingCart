@@ -14,7 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.niit.shoppingcart.dao.UsersDao;
 import com.niit.shoppingcart.model.Users;
 
-
+@Controller
 public class UserController {
 	@Autowired
 	UsersDao usersDao;

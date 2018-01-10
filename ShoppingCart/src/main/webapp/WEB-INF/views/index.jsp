@@ -15,9 +15,9 @@ Shopping Cart!
 <br>
 <a href="usersform">Add User</a>  
 <a href="viewusers">View Users</a>  
-<a href="categoriesform">Add Categories</a>
+<a href="categoriesform">Add Category</a>
 <a href="viewcategories">View Categories</a>
-<a href="addproducts">Add Products</a>
+<a href="addproduct">Add Product</a>
 <a href="viewproducts">View Products</a>
 
 </body>
