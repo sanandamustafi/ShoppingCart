@@ -19,7 +19,7 @@ public class Product implements Serializable{
 	@Id
 	@GeneratedValue
 	
-	private String productId;
+	private int productId;
 	private String productName;
 	private String productDescription;
 	private  double price;
@@ -49,10 +49,10 @@ public class Product implements Serializable{
 	public void setProductStatus(boolean productStatus) {
 		this.productStatus = productStatus;
 	}
-	public String getProductId() {
+	public int getProductId() {
 		return productId;
 	}
-	public void setProductId(String productId) {
+	public void setProductId(int productId) {
 		this.productId = productId;
 	}
 	public String getProductName() {

@@ -16,7 +16,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<title>Admin Add_Products</title>
+<title> Add_Products</title>
 
 <style>
 table {
@@ -34,7 +34,7 @@ td, th {
 </head>
 
 
-
+<body>
 <div class="container">
  <div class="row" >
   <div align="center"  width="70%"  class="table table-hover table-condensed table-bordered background-color: pink"> 
@@ -57,9 +57,9 @@ td, th {
          </tr> 
          <tr> 
          <form:select class="form-control" path="productcategories.categoryId">
-         <c:forEach items="${categoryList}" var="productCategory">
-         <form:option value="${productCategory.categoryId}">
-         ${productCategory.categoryName}
+         <c:forEach items="${categoryList}" var="productCategories">
+         <form:option value="${productCategories.categoryId}">
+         ${productCategories.categoryName}
          </form:option>
          </c:forEach>
          </form:select><br></tr>
@@ -81,4 +81,6 @@ td, th {
 </div>
 
 </div>
-</div></div>
+</div>
+</div>
+</body>

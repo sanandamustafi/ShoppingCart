@@ -111,9 +111,9 @@ public class ProductController {
 		List<Categories> categoryList = categoriesDao.getlist();
 		session.setAttribute("categoryList", categoryList);
 		Product p=productDao.FindByProductID(productId);
-		ModelAndView mv = new ModelAndView("updateProducts", "command", p);
+		ModelAndView mv = new ModelAndView("updateproducts", "command", p);
 		mv.addObject("categoryList", categoryList);
-
+        System.out.println("mmmm "+ categoryList.size());
 		return mv;
 	}
 	@RequestMapping(value = "/updateproducts", method = RequestMethod.POST)
@@ -153,13 +153,13 @@ public class ProductController {
 			product.setProductImage(productImage);
 			product.setProductStatus(true);	
 			productDao.updateProduct(product);
-			httpSession.setAttribute("sucessMessage", "product updateded sucessfully");
+			httpSession.setAttribute("successMessage", "product updated sucessfully");
 		} /*else {
 			modelAndView.addObject("errorMessage", "failed to update product");*/
 		/*}*/
 		else
 		{
-			httpSession.setAttribute("sucessMessage", "product updateded sucessfully");
+			httpSession.setAttribute("successMessage", "product updateded sucessfully");
 			System.out.println("MMMM "+product.getPrice());
 			product.setProductImage("");
 			product.setProductImage(productImage);

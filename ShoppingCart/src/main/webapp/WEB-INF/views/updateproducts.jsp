@@ -39,8 +39,7 @@ td, th {
 
   
 
-
-
+<body>
 
 <div class="container">
  <div class="row" >
@@ -58,12 +57,17 @@ td, th {
           <td>Description :</td>    
           <td><form:input path="productDescription" /></td>  
          </tr> 
+         <tr>    
+          <td>Price :</td>    
+          <td><form:input path="price"  /></td>  
+         </tr> 
          <tr>
-         <form:select class="form-control" path="productCategories.categoryId">
-         <c:forEach items="${categoryList}" var="productCategory">
-         <form:option value="${productCategory.categoryId}">
-         ${productCategory.categoryName}
+         <form:select class="form-control" path="productcategories.categoryId">
+         <c:forEach items="${categoryList}" var="productCategories">
+         <form:option value="${productCategories.categoryId}">
+         ${productCategories.categoryName}
          </form:option>
+         
          </c:forEach>
          </form:select> <br></tr>
          
@@ -89,4 +93,5 @@ td, th {
        </div>
        </div>
        </div>
+       </body>
        </html>
