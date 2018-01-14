@@ -17,6 +17,7 @@ public class Orders {
 	@Id
 	@GeneratedValue
 	private int orderId;
+	
 	private String OrderStatus;
 	@OneToMany(mappedBy="orders")
 	List<CartItem> cartItems;
@@ -27,16 +28,18 @@ public class Orders {
 	private String orderAddress;
 	private int orderPin;
 	private double orderTotal;
+	
+
 	public int getOrderId() {
 		return orderId;
 	}
-	public void setOrderDetailsId(int orderId) {
+	public void setOrderId(int orderId) {
 		this.orderId = orderId;
 	}
 	public String getOrderStatus() {
 		return OrderStatus;
 	}
-	public void setOrderDetailsStatus(String orderStatus) {
+	public void setOrderStatus(String orderStatus) {
 		OrderStatus = orderStatus;
 	}
 	public List<CartItem> getCartItems() {
@@ -45,10 +48,10 @@ public class Orders {
 	public void setCartItems(List<CartItem> cartItems) {
 		this.cartItems = cartItems;
 	}
-	public Date getOrder() {
+	public Date getOrders() {
 		return orders;
 	}
-	public void setOrderDetails(Date orders) {
+	public void setOrders(Date orders) {
 		this.orders = orders;
 	}
 	public Users getUsers() {
@@ -60,7 +63,7 @@ public class Orders {
 	public String getOrderAddress() {
 		return orderAddress;
 	}
-	public void setOrderDetailsAddress(String orderAddress) {
+	public void setOrderAddress(String orderAddress) {
 		this.orderAddress = orderAddress;
 	}
 	public int getOrderPin() {
@@ -72,8 +75,7 @@ public class Orders {
 	public double getOrderTotal() {
 		return orderTotal;
 	}
-	public void setOrderDetailsTotal(double orderTotal) {
+	public void setOrderTotal(double orderTotal) {
 		this.orderTotal = orderTotal;
 	}
-
-}
+	}

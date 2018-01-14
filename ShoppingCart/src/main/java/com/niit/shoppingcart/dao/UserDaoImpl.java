@@ -2,6 +2,7 @@ package com.niit.shoppingcart.dao;
 
 import java.util.List;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -9,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.niit.shoppingcart.model.Categories;
 import com.niit.shoppingcart.model.Users;
 
 @ Repository("usersDao")
@@ -24,18 +26,23 @@ public class UserDaoImpl implements UsersDao {
 	protected Session getSession() {
 		return sessionFactory.openSession();
 	}
-	public void addUsers(Users users) {
+	public boolean addUsers(Users users) {
 		
-		Session session = getSession();
+		try{
+			Session session = getSession();
 
-	
+					session.save(users);  ///  insert into table 
 
-		session.save(users);  ///  insert into table 
+					session.flush();
 
-		session.flush();
-
-		session.close();
-
+					session.close();
+					
+					return true;
+				}
+					catch(HibernateException e)
+					{ 
+					return false;
+					}
 	}
 
 	public Users getUsersById(String userId) {
@@ -63,31 +70,41 @@ public class UserDaoImpl implements UsersDao {
 		return (Users) query.uniqueResult();
 
 	}
-	public void updateUsers(Users users) {
+	public boolean updateUsers(Users users) {
 		
-		Session session = getSession();
+		try{		// TODO Auto-generated method stub
+			Session session = getSession();
 
-		
+					session.update(users);
 
-		session.update(users);
+					session.flush();
 
-		session.flush();
-
-		session.close();
+					session.close();
+					return true;
+					}catch(HibernateException e)
+			           {
+						return false;
+					}
 	}
 		
 	
-	public void deleteUsers(String userId) {
-		Session session = getSession();
+	public boolean deleteUsers(String userId) {
+		try{
+			Session session = getSession();
 
-		Query query = session.createQuery("from Users where userId = ?");
-		query.setString(0, userId);
+			Query query = session.createQuery("from Users where userId = ?");
+			query.setString(0, userId);
 
-		Users u=(Users) query.uniqueResult();
-		session.delete(u);
-		session.flush();
+			Users u=(Users) query.uniqueResult();
+			session.delete(u);
+			session.flush();
 
-		session.close();
-		
+			session.close();
+			return true;
+			}
+			catch(HibernateException e)
+			{
+				return false;
+				}
 	}
 }
