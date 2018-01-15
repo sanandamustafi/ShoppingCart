@@ -42,16 +42,16 @@
      <div class="login-form"><!--login form-->
      <h2><b>Please SignUp</b></h2>
      <form:form method="post" action="${pageContext.request.contextPath}/registerUser" >
-     <li>UserName<form:input type="text" class="form-control" placeholder="username" path="name" required="true" /></li>
+     <li>UserName<form:input type="text" class="form-control" placeholder="username" path="userName" required="true" /></li>
      <br>
      <br>
-     <li>UserId<form:input type="text" class="form-control" placeholder="UserId" path="id"  required="true"/></li>
+     <li>UserId<form:input type="text" class="form-control" placeholder="UserId" path="userId"  required="true"/></li>
      <br>
      <br>
      <li>Password<form:input type="password" class="form-control" placeholder="maximum and minimum five digit can be entered" path="password" required="true"/></li>
      <br>
      <br>
-     <li>Email-Id<form:input type="email" class="form-control" placeholder="EmailId" path="email" required="true"/></li>
+     <li>Email-Id<form:input type="email" class="form-control" placeholder="EmailId" path="userEmail" required="true"/></li>
      <br>
      <br>
      <button type="submit" class="btn btn-success">SignUp</button>

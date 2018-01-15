@@ -68,7 +68,7 @@ public class CartController {
 	@RequestMapping("/addToCart/{productId}")
 	public ModelAndView addToCart(@PathVariable int productId, Principal principal, HttpSession httpSession){
 		System.out.println("at addToCart");
-		ModelAndView modelAndView=new ModelAndView("redirect:/cartView");
+		ModelAndView modelAndView=new ModelAndView("redirect:/cartview");
 		Product product=productDao.FindByProductID(productId);
 		String userId=principal.getName();
 		Users users=usersDao.getUsersById(userId);

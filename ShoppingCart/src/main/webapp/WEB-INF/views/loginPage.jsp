@@ -36,7 +36,7 @@
          <div style="color:red;margin:10px 0px;">
           
                 Login Failed!!!<br />
-                
+                 Reason :  ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}
                  
          </div>
     </c:if>
@@ -44,7 +44,7 @@
    <h3>Enter user name and password:</h3>  
      
  
-<form:form method="post" action="" >
+<form:form method="post" action="${pageContext.request.contextPath}/j_spring_security_check" >
       <table>
          <tr>
             <td>User:</td>

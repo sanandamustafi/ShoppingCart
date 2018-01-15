@@ -59,7 +59,7 @@
     <p>${cartItem.product.productId}</p>
     </td>
     <td class="cart_price">
-    <p>&#X20B9; ${cartItem.product.productPrice}</p>
+    <p>&#X20B9; ${cartItem.product.price}</p>
     </td>
     <td class="cart_price">
     <p>${cartItem.cartItemQuantity}</p></td>

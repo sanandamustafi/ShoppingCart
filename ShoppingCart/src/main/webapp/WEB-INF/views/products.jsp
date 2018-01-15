@@ -29,7 +29,7 @@
    <td>${product.productName}</td>  
         
   
-   <td><a class="btn btn-info" href="${pageContext.request.contextPath}/showProduct/${product.productId}">Show</a></td>  
+   <td><a class="btn btn-info" href="${pageContext.request.contextPath}/showproduct/${product.productId}">Show</a></td>  
    
    </tr>  
    </c:forEach>  
