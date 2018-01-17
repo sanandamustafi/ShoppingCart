@@ -104,7 +104,7 @@ public class CartController {
 	}
 	@RequestMapping("/deleteCartItem/{cartItemId}")
 	public ModelAndView deleteCartItem(@PathVariable int cartItemId,Principal principal, HttpSession httpSession){
-		ModelAndView modelAndView=new ModelAndView("redirect:/cartView");
+		ModelAndView modelAndView=new ModelAndView("redirect:/cartview");
 		CartItem cartItem=cartItemDao.getCartItemByCartItemId(cartItemId);
 		Cart cart=cartItem.getCart();
 		cart.setCartTotal(cart.getCartTotal()-cartItem.getCartItemSubTotal());
@@ -123,10 +123,10 @@ public class CartController {
 	
 	@RequestMapping(value="/addToOrderDetails",method=RequestMethod.POST)
 	public ModelAndView
-	addToOrderDetails(@ModelAttribute("OrderDetails") Orders orders,Principal principal,HttpSession httpsession){
+	addToOrderDetails(@ModelAttribute("orders") Orders orders,Principal principal,HttpSession httpsession){
 		Double tot=(Double)
 		httpsession.getAttribute("grandTotal");
-		//int total=Integer.parseInt(tot);
+		
 		System.out.println("at addToOrders");
 		ModelAndView modelAndView=new ModelAndView("redirect:/orderDetails");
 		Users users=usersDao.getUsersById(principal.getName());

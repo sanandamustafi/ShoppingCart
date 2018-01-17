@@ -10,34 +10,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-   
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-  
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
-    
-  .carousel-inner img {
-      width: 100%; 
-      margin: auto;
-      min-height:200px;
-  }
- 
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none; 
-    }
-  }
-  </style>
-      
-      <%@ include file="header.jsp" %>
-      
+   <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+   </head>
+
+
+<body>
+<jsp:include page="/WEB-INF/views/header.jsp"></jsp:include>
+<h2>Shopping Cart!</h2>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -49,7 +28,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="${pageContext.request.contextPath}\resources\img\mobile.jpg" alt="Image">
+        <img src="${pageContext.request.contextPath}\resources\img\mobile.jpg" alt="Image"style="width:100%;">
         <div class="carousel-caption">
           <h3>New Mobiles</h3>
           <p>This week's top stories...</p>
@@ -57,7 +36,7 @@
       </div>
 
       <div class="item">
-        <img src="${pageContext.request.contextPath}\resources\img\fashion.jpg" alt="Image">
+        <img src="${pageContext.request.contextPath}\resources\img\fashion.jpg" alt="Image"style="width:100%;">
         <div class="carousel-caption">
           <h3>New fashion clothes</h3>
           <p>This week's top stories...</p>
@@ -78,6 +57,7 @@
       <span class="sr-only">Next</span>
     </a>
 </div>
+      
 
 
   
@@ -85,8 +65,8 @@
   <p>100% Purchase Protection</p>
 </footer>
   
-</head>
-<body>
+
+
 
 
   

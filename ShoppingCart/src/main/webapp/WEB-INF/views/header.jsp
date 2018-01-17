@@ -1,21 +1,16 @@
+  <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" isELIgnored="false"%>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+     <%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
+ <c:set var="context" value="${pageContext.request.contextPath}"/>
  
-  <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-  <!DOCTYPE html>
-  <html> 
- <title>Header</title>
- <head>
- <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
-   </head>
+
+
   
-  <c:set var="context" value="${pageContext.request.contextPath}"/>
+ 
+  
+ 
 <nav class="navbar navbar-inverse">
 <div class="container fluid">
 <div class="navbar-header">
@@ -30,7 +25,15 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
            <!-- each <li> </li> is one menu option -->
-        <li class="active"><a href="${pageContext.request.contextPath}/index">Home</a></li>
+   <li><a href="${pageContext.request.contextPath}/index"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Home</a></li>
+        <li><a href="contact"><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;Contact</a></li>
+ <li><a href="usersform">Add User</a></li>  
+<li><a href="viewusers">View Users</a></li>  
+<li><a href="categoriesform">Add Category</a></li>
+<li><a href="viewcategories">View Categories</a></li>
+<li><a href="addproduct">Add Product</a></li>
+<li><a href="viewproducts">View Products</a></li>
+               
         <!-- <li class="dropdown"> is used to create a menu option which will have sub menu -->
         <li class="dropdown">
         
@@ -45,23 +48,32 @@
           </ul>
           
           </li>
+          <security:authorize access="hasRole('ROLE_ADMIN')"><li></li></security:authorize>
           </ul>
           
  
 <ul class="nav navbar-nav navbar-right">
         
         
-        <li><a href="${pageContext.request.contextPath}/loginPage"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-       <li><a href="">Hello ${pageContext.request.userPrincipal.name}</a></li>
-       <li><a href="${pageContext.request.contextPath}/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+<c:if test="${pageContext.request.userPrincipal.name == null}"><li><a href="${pageContext.request.contextPath}/loginPage"><span class="glyphicon glyphicon-log-in"></span> Login</a></li></c:if>
+<c:if test="${pageContext.request.userPrincipal.name != null}"><li><a href="">Hello ${pageContext.request.userPrincipal.name}</a></li></c:if>
+<c:if test="${pageContext.request.userPrincipal.name != null}"> <li><a href="${pageContext.request.contextPath}/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li></c:if>
      
       
-          <li><a href="${pageContext.request.contextPath}/register"><span class="glyphicon glyphicon-register"></span> Sign UP</a></li>
+<c:if test="${pageContext.request.userPrincipal.name==null}"><li><a href="${pageContext.request.contextPath}/register"><span class="glyphicon glyphicon-register"></span> Sign UP</a></li></c:if>
         
       </ul>
-   
+       <ul class="nav navbar-nav">
+
+<security:authorize access="hasRole('ROLE_ADMIN')">
+<li><a href="${context}/viewproducts">Admin Control</a></li>
+</security:authorize>
+
+<security:authorize access="hasRole('ROLE_USER')">
+<li><a href="${pageContext.request.contextPath}/cartview">Cart</a></li>
+</security:authorize>
+ </ul>  
       </div>
   </div>
 </nav>
-</body>
-</html>
+ 

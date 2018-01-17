@@ -66,8 +66,8 @@ public class UserController {
     /* user Registration*/
     
     @RequestMapping(value="/registerUser",method=RequestMethod.POST)
-    public ModelAndView registerUser(@ModelAttribute("User")Users users,HttpSession httpSession){
-    	ModelAndView modelAndView=new ModelAndView("userRegistrationView","command",new Users());
+    public ModelAndView registerUser(@ModelAttribute("users")Users users,HttpSession httpSession){
+    	ModelAndView modelAndView=new ModelAndView("userregistrationview","command",new Users());
     	if(usersDao.getUsersById(users.getUserId())!=null){
     		System.out.println("at same user Id");
     		modelAndView.addObject("errorMessage","Please try with diffrent user Id.");
