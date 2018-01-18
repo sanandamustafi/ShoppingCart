@@ -18,7 +18,7 @@
 
 </head>
 <body>
-<%@ include file="header.jsp" %>
+<jsp:include page="header.jsp"></jsp:include> 
 <div class="container">
 <table align="center"  width="70%"  class="table table-hover table-condensed table-bordered">  
 <br><br>

@@ -26,7 +26,7 @@
 <div class="container">
  <div class="row">
  <div class="col-sm-6 item-photo">
-<img style="max-width:100%; margin-top:30 px;" src="${pageContext.request.contextPath}\resources\img\checkout.png">
+<img style="max-width:100%; margin-top:30 px;" src="${pageContext.request.contextPath}/resources/img/checkout.png">
 </div>
  
  <div class="col-md-6" style="border:0px solid gray">

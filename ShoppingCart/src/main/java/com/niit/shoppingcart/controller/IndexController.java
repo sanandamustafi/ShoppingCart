@@ -59,6 +59,12 @@ public class IndexController {
 		 mv.addObject("productList", productDao.retreive());
 	        return mv;  
 	    } 
-	 
+	 @RequestMapping("/contact")  
+	    public ModelAndView index3(HttpSession session){  
+		 ModelAndView mv= new ModelAndView("contact");
+		 session.setAttribute("categoryList", categoriesDao.getlist());
+		 mv.addObject("categoryList", categoriesDao.getlist());
+	         return mv;  
+	 }
 } 
 

@@ -2,15 +2,15 @@
     pageEncoding="ISO-8859-1"%>
     <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
  <%@ page isELIgnored="false" %>
- 
+ <%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
  <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
  
  <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
  
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html >
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
 
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,14 +21,14 @@
 <title>Login</title>
 </head>
 <body>
- 
+ <jsp:include page="header.jsp"></jsp:include> 
  <div class="container">
  <div class="row">
  <div class="col-sm-6 item-photo">
-<img style="max-width:100%; margin-top:30 px;" src="${pageContext.request.contextPath}\resources\img\login.png">
+<img src="${pageContext.request.contextPath}/resources/img/Login.png">
 </div>
     
-    
+   <br><br>
    <h3>Welcome Back</h3>
      
      <!-- /login?error=true -->
@@ -54,7 +54,9 @@
             <td>Password:</td>
             <td><input type='password' name='password' required/></td>
          </tr>
+         
          <tr>
+         <br><br>
             <td><input name="submit" type="submit" value="submit" /></td>
          </tr>
       </table>

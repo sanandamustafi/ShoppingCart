@@ -28,7 +28,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="${pageContext.request.contextPath}\resources\img\mobile.jpg" alt="Image"style="width:100%;">
+        <img src="${pageContext.request.contextPath}\resources\img\mobile.jpg" alt="Image"style="width:85%;">
         <div class="carousel-caption">
           <h3>New Mobiles</h3>
           <p>This week's top stories...</p>
@@ -36,7 +36,7 @@
       </div>
 
       <div class="item">
-        <img src="${pageContext.request.contextPath}\resources\img\fashion.jpg" alt="Image"style="width:100%;">
+        <img src="${pageContext.request.contextPath}\resources\img\fashion.jpg" alt="Image"style="width:85%;">
         <div class="carousel-caption">
           <h3>New fashion clothes</h3>
           <p>This week's top stories...</p>
@@ -66,7 +66,7 @@
 </footer>
   
 
-
+<jsp:include page="/WEB-INF/views/footer.jsp"></jsp:include>
 
 
   

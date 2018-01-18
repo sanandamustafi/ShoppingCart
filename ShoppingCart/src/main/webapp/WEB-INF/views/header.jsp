@@ -11,28 +11,24 @@
  
   
  
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-light"style="background-color: brown;">
 <div class="container fluid">
 <div class="navbar-header">
 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navDemo">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
+<span class="icon-bar"style="background-color: black;"></span>
+<span class="icon-bar"style="background-color: black;"></span>
+<span class="icon-bar"style="background-color: black;"></span>
 </button>
-
-  <a class="navbar-brand" href="#"><i class="fas fa-shopping-cart"></i>Shopping Cart</a>  
+<ul class="nav navbar-nav navbar-left">
+  <a class="navbar-brand" href="#"><i class="fas fa-shopping-cart"style="font-size:20px;color:green;"></i>Shopping Cart</a>
+  </ul>  
   </div> 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
            <!-- each <li> </li> is one menu option -->
    <li><a href="${pageContext.request.contextPath}/index"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Home</a></li>
-        <li><a href="contact"><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;Contact</a></li>
- <li><a href="usersform">Add User</a></li>  
-<li><a href="viewusers">View Users</a></li>  
-<li><a href="categoriesform">Add Category</a></li>
-<li><a href="viewcategories">View Categories</a></li>
-<li><a href="addproduct">Add Product</a></li>
-<li><a href="viewproducts">View Products</a></li>
+        <li><a href="${pageContext.request.contextPath}/contact"><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;Contact</a></li>
+       
                
         <!-- <li class="dropdown"> is used to create a menu option which will have sub menu -->
         <li class="dropdown">
@@ -54,19 +50,25 @@
  
 <ul class="nav navbar-nav navbar-right">
         
-        
+  
+       
 <c:if test="${pageContext.request.userPrincipal.name == null}"><li><a href="${pageContext.request.contextPath}/loginPage"><span class="glyphicon glyphicon-log-in"></span> Login</a></li></c:if>
 <c:if test="${pageContext.request.userPrincipal.name != null}"><li><a href="">Hello ${pageContext.request.userPrincipal.name}</a></li></c:if>
 <c:if test="${pageContext.request.userPrincipal.name != null}"> <li><a href="${pageContext.request.contextPath}/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li></c:if>
      
       
-<c:if test="${pageContext.request.userPrincipal.name==null}"><li><a href="${pageContext.request.contextPath}/register"><span class="glyphicon glyphicon-register"></span> Sign UP</a></li></c:if>
+<c:if test="${pageContext.request.userPrincipal.name==null}"><li><a href="${pageContext.request.contextPath}/register"><span class="glyphicon glyphicon-user"></span> Sign UP</a></li></c:if>
         
       </ul>
        <ul class="nav navbar-nav">
 
 <security:authorize access="hasRole('ROLE_ADMIN')">
 <li><a href="${context}/viewproducts">Admin Control</a></li>
+<li><a href="${context}/addproduct">Add Product</a></li>
+<li><a href="${context}/usersform">Add User</a></li>  
+<li><a href="${context}/viewusers">View Users</a></li>  
+<li><a href="${context}/categoriesform">Add Category</a></li>
+<li><a href="${context}/viewcategories">View Categories</a></li>
 </security:authorize>
 
 <security:authorize access="hasRole('ROLE_USER')">

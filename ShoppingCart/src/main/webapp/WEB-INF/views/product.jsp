@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"  isELIgnored="false"%>
      <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-   
+   <%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
     
     
 <!DOCTYPE html>
@@ -18,7 +18,7 @@
 </head>
 
 <body>
-<%@ include file="header.jsp" %>
+<jsp:include page="header.jsp"></jsp:include> 
 
  <div class="container">
  <div class="row">

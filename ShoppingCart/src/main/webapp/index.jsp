@@ -24,6 +24,6 @@
 
 
 
-<img src="${pageContext.request.contextPath}\resources\img\Welcome.png"/>
+<img src="${pageContext.request.contextPath}/resources/img/Welcome-Image.gif">
 </body>
 </html>

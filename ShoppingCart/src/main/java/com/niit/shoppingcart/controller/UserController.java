@@ -24,7 +24,7 @@ public class UserController {
 	@Autowired
 	  CartDao cartDao;
 	
-	/*@RequestMapping("/usersform")  
+	@RequestMapping("/usersform")  
     public ModelAndView showform(){  
         return new ModelAndView("usersform","command",new Users());  
     } 
@@ -55,7 +55,7 @@ public class UserController {
     	System.out.println("delete is called");
        usersDao.deleteUsers(id);
         return new ModelAndView("redirect:/viewusers");  
-    }  */
+    } 
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
     public ModelAndView userRegistrationView(){
     	return new

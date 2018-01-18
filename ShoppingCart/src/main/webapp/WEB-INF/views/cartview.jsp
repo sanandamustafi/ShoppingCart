@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" isELIgnored="false"%>
     <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-    
+    <%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
     <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
     
     
@@ -18,6 +18,7 @@
 <title>Cart_view</title>
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include> 
 <c:if test="${cartItems.isEmpty()}">
     <div class="container">
     <div class="alert alert-success alert-dismissable">

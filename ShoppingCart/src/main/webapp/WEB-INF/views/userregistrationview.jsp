@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" isELIgnored="false"%>
     <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-    
+    <%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
     <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
     
     
-     <!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 
 <head>
@@ -51,7 +51,13 @@
      <li>Password<form:input type="password" class="form-control" placeholder="maximum and minimum five digit can be entered" path="password" required="true"/></li>
      <br>
      <br>
+     <li>Address<form:input type="address" class="form-control" placeholder="Address" path="userAddress" required="true"/></li>
+     <br>
+     <br>
      <li>Email-Id<form:input type="email" class="form-control" placeholder="EmailId" path="userEmail" required="true"/></li>
+     <br>
+     <br>
+     <li>Phone<form:input type="phone" class="form-control" placeholder="Phone" path="userPhone" required="true"/></li>
      <br>
      <br>
      <button type="submit" class="btn btn-success">SignUp</button>
