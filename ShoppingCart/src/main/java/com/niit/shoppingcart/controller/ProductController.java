@@ -92,8 +92,17 @@ public class ProductController {
 	}
 	@RequestMapping(value = "/discontinueproduct/{productId}", method = RequestMethod.GET)
 	public ModelAndView deactivateProduct(@PathVariable int productId, HttpSession httpSession) {
-		ModelAndView modelAndView = new ModelAndView("redirect:/viewproducts", "command", new Product());
+		ModelAndView modelAndView = new ModelAndView("redirect:/viewproducts");
 		Product product = productDao.FindByProductID(productId);
+		if(product == null)
+		{
+			System.out.println("no product ");
+		}
+		else
+		{
+			System.out.println("product found ");
+		}
+		
 		product.setProductStatus(false);
 		if (productDao.updateProduct(product)) {
 			httpSession.setAttribute("successMessage", "product deactivated sucessfully");

@@ -19,6 +19,7 @@
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include> 
+
 <c:if test="${cartItems.isEmpty()}">
     <div class="container">
     <div class="alert alert-success alert-dismissable">

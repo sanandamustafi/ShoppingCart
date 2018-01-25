@@ -64,11 +64,11 @@
 
 <security:authorize access="hasRole('ROLE_ADMIN')">
 <li><a href="${context}/viewproducts">Admin Control</a></li>
-<li><a href="${context}/addproduct">Add Product</a></li>
-<li><a href="${context}/usersform">Add User</a></li>  
-<li><a href="${context}/viewusers">View Users</a></li>  
 <li><a href="${context}/categoriesform">Add Category</a></li>
 <li><a href="${context}/viewcategories">View Categories</a></li>
+<li><a href="${context}/addproduct">Add Product</a></li>
+<li><a href="viewproducts">View Products</a></li>
+
 </security:authorize>
 
 <security:authorize access="hasRole('ROLE_USER')">

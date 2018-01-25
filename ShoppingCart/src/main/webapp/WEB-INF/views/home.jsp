@@ -15,9 +15,11 @@
 
 
 <body>
-<jsp:include page="/WEB-INF/views/header.jsp"></jsp:include>
-<h2>Shopping Cart!</h2>
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<%@  include file="header.jsp" %>
+
+<%-- <jsp:include page="/WEB-INF/views/header.jsp"></jsp:include> --%>
+
+ <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -28,18 +30,28 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="${pageContext.request.contextPath}\resources\img\mobile.jpg" alt="Image"style="width:85%;">
+        <img src="${pageContext.request.contextPath}/resources/img/mobile.jpg" alt="Image"style="width:80%;">
+       
         <div class="carousel-caption">
-          <h3>New Mobiles</h3>
-          <p>This week's top stories...</p>
+          <h3 style="color:blue;">New Mobiles</h3>
+          <p style="color:blue;">This week's top stories...</p>
         </div>      
       </div>
 
       <div class="item">
-        <img src="${pageContext.request.contextPath}\resources\img\fashion.jpg" alt="Image"style="width:85%;">
+        <img src="${pageContext.request.contextPath}/resources/img/fashion.jpg" alt="Image"style="width:80%;">
+         
         <div class="carousel-caption">
-          <h3>New fashion clothes</h3>
-          <p>This week's top stories...</p>
+          <h3 style="color:blue;">New fashion clothes</h3>
+          <p style="color:blue;">This week's top stories...</p>
+        </div>      
+      </div>
+      <div class="item">
+        <img src="${pageContext.request.contextPath}/resources/img/books2.jpg" alt="Image"style="width:80%;">
+        <br><br><br>
+        <div class="carousel-caption">
+          <h3 style="color:blue;">New Books</h3>
+          <p style="color:blue;">This week's top stories...</p>
         </div>      
       </div>
     </div>
@@ -60,13 +72,10 @@
       
 
 
-  
-   <footer class="container-fluid text-center">
+  <footer class="container-fluid text-center">
   <p>100% Purchase Protection</p>
 </footer>
   
-
-<jsp:include page="/WEB-INF/views/footer.jsp"></jsp:include>
 
 
   

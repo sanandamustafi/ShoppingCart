@@ -20,10 +20,7 @@
 <br>
 <li><a href="usersform">Add User</a></li>  
 <li><a href="viewusers">View Users</a></li>  
-<li><a href="categoriesform">Add Category</a></li>
-<li><a href="viewcategories">View Categories</a></li>
-<li><a href="addproduct">Add Product</a></li>
-<li><a href="viewproducts">View Products</a></li>
-<jsp:include page="/WEB-INF/views/footer.jsp"></jsp:include>
+
+
 </body>
 </html>

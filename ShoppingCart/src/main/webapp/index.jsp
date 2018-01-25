@@ -17,7 +17,7 @@
 <title>Insert title here</title>
 </head>
 <body>
- <%-- <% response.sendRedirect("/index") ;%> --%>
+  <% response.sendRedirect("http://localhost:9000/ShoppingCart/index") ;%>
 
 
 

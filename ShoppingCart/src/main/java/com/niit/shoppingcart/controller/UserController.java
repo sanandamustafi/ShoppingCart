@@ -24,7 +24,7 @@ public class UserController {
 	@Autowired
 	  CartDao cartDao;
 	
-	@RequestMapping("/usersform")  
+	/*@RequestMapping("/usersform")  
     public ModelAndView showform(){  
         return new ModelAndView("usersform","command",new Users());  
     } 
@@ -60,7 +60,7 @@ public class UserController {
     public ModelAndView userRegistrationView(){
     	return new
     			ModelAndView("userregistrationview", "command",new Users());
-    }
+    }*/
     
     
     /* user Registration*/

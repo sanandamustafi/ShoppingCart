@@ -51,7 +51,7 @@ td, th {
         <table >    
          <tr>    
           <td>Name : </td>   
-          <td><form:input path="productName"  /></td>  
+          <td><form:input path="productName"/></td>  
          </tr>    
          <tr>    
           <td>Description :</td>    

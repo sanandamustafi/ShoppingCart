@@ -29,7 +29,7 @@
 <div class="container">
  <div class="row">
  <div class="col-sm-6 item-photo">
-<img style="max-width:100%; margin-top:30 px;" src="${pageContext.request.contextPath}\resources\img\customer_details.jpg">
+<img style="max-width:40%; margin-top:30 px;" src="${pageContext.request.contextPath}/resources/img/customer_ details.jpg">
 </div>
 
 <form>
