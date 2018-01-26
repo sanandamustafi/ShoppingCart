@@ -37,7 +37,7 @@
    <br><br>
      <a href="${pageContext.request.contextPath}/addToCart/${product.productId}" class="btn btn-info btn-lg">
      <span class="glyphicon glyphicon-shopping-cart"></span>addToCart</a>
-     <h5><span class="glyphicon glyphicon-heart-empty" style="cursor:pointer;">Wish List</span></h5>
+     
      </div>
      </div>
      </div>

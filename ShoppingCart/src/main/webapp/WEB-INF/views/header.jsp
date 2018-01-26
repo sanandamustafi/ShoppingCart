@@ -20,14 +20,16 @@
 <span class="icon-bar"style="background-color: black;"></span>
 </button>
 <ul class="nav navbar-nav navbar-left">
-  <a class="navbar-brand" href="#"><i class="fas fa-shopping-cart"style="font-size:20px;color:green;"></i>Shopping Cart</a>
-  </ul>  
+  <a class="navbar-brand brand-name" href="#"><i class="fa fa-cart-plus" aria-hidden="true"style="font-size:25px;color:black;position:absolute; top:0; left:0;">&nbsp;<i>Shopping Cart</i></i></a>
+</ul>  
   </div> 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
+      <br>
            <!-- each <li> </li> is one menu option -->
-   <li><a href="${pageContext.request.contextPath}/index"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Home</a></li>
-        <li><a href="${pageContext.request.contextPath}/contact"><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;Contact</a></li>
+   <li><a href="${pageContext.request.contextPath}/index"><i class="fa fa-home fa-fw" aria-hidden="true"></i>Home</a></li>
+   <li><a href="${pageContext.request.contextPath}/home1"><i class="fa fa-book" aria-hidden="true"></i>Home1</a></li>
+        <li><a href="${pageContext.request.contextPath}/contact"><i class="fa fa-address-book" aria-hidden="true"></i>Contact</a></li>
        
                
         <!-- <li class="dropdown"> is used to create a menu option which will have sub menu -->
@@ -67,7 +69,7 @@
 <li><a href="${context}/categoriesform">Add Category</a></li>
 <li><a href="${context}/viewcategories">View Categories</a></li>
 <li><a href="${context}/addproduct">Add Product</a></li>
-<li><a href="viewproducts">View Products</a></li>
+
 
 </security:authorize>
 

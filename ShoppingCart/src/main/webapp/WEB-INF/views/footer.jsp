@@ -35,8 +35,8 @@
                 </ul>
             </div>
             
-            
-           
+           class="container-fluid text-center" 
+           <p>100% Purchase Protection</p>
 
   
     <div class="footer-bottom">
