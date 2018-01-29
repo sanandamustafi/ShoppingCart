@@ -17,8 +17,8 @@
 
 <title>Registration</title>
 
- <jsp:include page="header.jsp"></jsp:include> 
- <title>Bootstrap Case</title>   
+ <%@  include file="header.jsp" %>
+ <title>Users Registration</title>   
    
       <c:if test="${successMessage != null}"> 
    

@@ -55,12 +55,12 @@ public class UserController {
     	System.out.println("delete is called");
        usersDao.deleteUsers(id);
         return new ModelAndView("redirect:/viewusers");  
-    } 
+    } */
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
     public ModelAndView userRegistrationView(){
     	return new
     			ModelAndView("userregistrationview", "command",new Users());
-    }*/
+    }
     
     
     /* user Registration*/

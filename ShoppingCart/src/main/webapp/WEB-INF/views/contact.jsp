@@ -12,7 +12,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<jsp:include page="header.jsp"></jsp:include> 
+<%@ include file="header.jsp"%>
 <div class="jumbotron text-center">
   <h1>Contacts</h1>
   </div>
