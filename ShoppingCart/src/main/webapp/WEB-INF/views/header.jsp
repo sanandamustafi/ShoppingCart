@@ -20,12 +20,12 @@
 <span class="icon-bar"style="background-color: black;"></span>
 </button>
 <ul class="nav navbar-nav navbar-left">
-  <a class="navbar-brand brand-name" href="#"><i class="fa fa-cart-plus" aria-hidden="true"style="font-size:25px;color:black;position:absolute; top:0; left:0;">&nbsp;<i>Shopping Cart</i></i></a>
+  <a class="navbar-brand brand-name" href="#"><i class="fa fa-cart-plus" aria-hidden="true"style="font-size:20px;color:black;position:absolute; top:0; left:0;">&nbsp;<i>Shopping Cart</i></i></a>
 </ul>  
   </div> 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-      <br>
+   <br>
            <!-- each <li> </li> is one menu option -->
    <li><a href="${pageContext.request.contextPath}/index"><i class="fa fa-home fa-fw" aria-hidden="true"></i>Home</a></li>
    <li><a href="${pageContext.request.contextPath}/home1"><i class="fa fa-book" aria-hidden="true"></i>Home1</a></li>

@@ -58,8 +58,7 @@ public class UserController {
     } */
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
     public ModelAndView userRegistrationView(){
-    	return new
-    			ModelAndView("userregistrationview", "command",new Users());
+    	return new ModelAndView("userregistrationview", "command",new Users());
     }
     
     
@@ -76,6 +75,7 @@ public class UserController {
     		users.setEnabled(true);
     		users.setRole("ROLE_USER");
     		Cart cart=new Cart();
+    		cart.setCartStatus(true);
     		
     		if(cartDao.insertCart(cart)){
     			users.setCart(cart);

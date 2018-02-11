@@ -18,7 +18,7 @@
 <title>Cart_view</title>
 </head>
 <body>
-<jsp:include page="header.jsp"></jsp:include> 
+<%@  include file="header.jsp" %> 
 
 <c:if test="${cartItems.isEmpty()}">
     <div class="container">

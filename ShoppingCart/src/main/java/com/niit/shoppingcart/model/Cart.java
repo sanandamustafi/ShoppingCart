@@ -16,7 +16,13 @@ public class Cart {
 	@OneToMany(mappedBy="cart")
 	private List<CartItem> cartItems;
 	private double cartTotal;
-	private String cartStatus;
+	private boolean cartStatus;
+	public boolean isCartStatus() {
+		return cartStatus;
+	}
+	public void setCartStatus(boolean cartStatus) {
+		this.cartStatus = cartStatus;
+	}
 	public int getCartId() {
 		return cartId;
 	}
@@ -35,12 +41,6 @@ public class Cart {
 	public void setCartTotal(double cartTotal) {
 		this.cartTotal = cartTotal;
 	}
-	public String getCartStatus() {
-		return cartStatus;
-	}
-	public void setCartStatus(String cartStatus) {
-		this.cartStatus = cartStatus;
-	}
-
+	
 
 }
